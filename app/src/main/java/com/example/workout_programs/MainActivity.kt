@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.view.Menu
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         menuInflater.inflate(R.menu.menu, menu);
         val item = menu?.findItem(R.id.action_search);
+
         val sv = MenuItemCompat.getActionView(item) as SearchView
 
         // Note how we create an object implementing the SearchView.OnQueryTextListener
@@ -50,4 +52,19 @@ class MainActivity : AppCompatActivity() {
 
         return true
     }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        val id = item!!.getItemId()
+        val intent = Intent(this, AddWorkout::class.java)
+
+        if (id == R.id.menuAdd){
+            startActivity(intent)
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
 }

@@ -7,8 +7,8 @@
           android:icon="@drawable/ic_search_black_24dp"
           app:showAsAction="ifRoom"/>
 
-    <item android:title=""
-          android:id="@+id/menuAdd"
+    <item android:id="@+id/menuAdd"
+          android:title=""
           android:icon="@drawable/ic_add_black_24dp"
           app:showAsAction="ifRoom"/>
 </menu>

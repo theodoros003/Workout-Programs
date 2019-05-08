@@ -2,5 +2,6 @@
     <string name="app_name">Workout_Programs</string>
     <string name="btnFullBody">Full Body</string>
     <string name="menuSearch"></string>
+    <string name="btnAdd">Add</string>
 
 </resources>
