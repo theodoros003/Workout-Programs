@@ -24,7 +24,7 @@
             android:id="@+id/toolbar2"/>
 
         <TextView
-                android:id="@+id/etTitle"
+                android:id="@+id/etMyTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -37,7 +37,7 @@
                 android:text="Title"/>
 
         <TextView
-                android:id="@+id/etSubTitle"
+                android:id="@+id/etMySubTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -46,7 +46,7 @@
                 android:textColor="#C0C0C0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/etTitle"
+                app:layout_constraintTop_toBottomOf="@id/etMyTitle"
                 android:text="SubTitle"/>
 
         <LinearLayout
@@ -58,9 +58,10 @@
                 android:padding="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/layout2"
-                app:layout_constraintTop_toBottomOf="@id/etSubTitle">
+                app:layout_constraintTop_toBottomOf="@id/etMySubTitle">
 
             <TextView
+                    android:id="@+id/MyRounds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="30dp"
@@ -75,17 +76,18 @@
         </LinearLayout>
 
         <LinearLayout
+                android:id="@+id/layout2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/layout2"
                 android:layout_margin="10dp"
                 android:padding="10dp"
                 app:layout_constraintLeft_toRightOf="@id/layout1"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/etSubTitle">
+                app:layout_constraintTop_toBottomOf="@id/etMySubTitle">
 
             <TextView
+                    android:id="@+id/MyRest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="30dp"
@@ -100,46 +102,46 @@
         </LinearLayout>
 
         <TextView
-                android:id="@+id/etID"
+                android:id="@+id/etMyId"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="#010203"
                 android:layout_marginTop="30dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/etName"
+                app:layout_constraintRight_toLeftOf="@id/etMyName"
                 app:layout_constraintTop_toBottomOf="@id/layout1"
                 android:text="ID"/>
         <TextView
-                android:id="@+id/etName"
+                android:id="@+id/etMyName"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="#010203"
                 android:layout_marginTop="30dp"
-                app:layout_constraintLeft_toRightOf="@id/etID"
+                app:layout_constraintLeft_toRightOf="@id/etMyId"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout1"
                 android:text="Name"/>
         <TextView
-                android:id="@+id/etReps"
+                android:id="@+id/etMyReps"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="#010203"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/etRepsNu"
-                app:layout_constraintTop_toBottomOf="@id/etID"
+                app:layout_constraintRight_toLeftOf="@id/etMyRepsNu"
+                app:layout_constraintTop_toBottomOf="@id/etMyId"
                 android:text=""/>
         <TextView
-                android:id="@+id/etRepsNu"
+                android:id="@+id/etMyRepsNu"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textColor="#C0C0C0"
-                app:layout_constraintLeft_toRightOf="@id/etReps"
+                app:layout_constraintLeft_toRightOf="@id/etMyReps"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/etName"
+                app:layout_constraintTop_toBottomOf="@id/etMyName"
                 android:text="Number of Reps"/>
 
 
