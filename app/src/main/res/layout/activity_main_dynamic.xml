@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/mainBtnLayout"
+            android:background="@drawable/workout_button"
+            android:layout_margin="5dp"
+            android:padding="15dp">
+
+        <Button
+                android:id="@+id/btnFullBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="40dp"
+                android:background="@android:color/transparent"
+                android:text="@string/btnFullBody"/>
+
+        <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="#C0C0C0"
+                android:text="SubTitle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -35,8 +35,8 @@ class AddWorkout : AppCompatActivity() {
             val rep2 = etReps2.text.toString().toLong()
             val ex3 = etName3.text.toString()
             val rep3 = etReps3.text.toString().toLong()
-            myData.addWorkout(title, subTitle, rest, rounds, ex1, rep1, ex2, rep2, ex3, rep3)
-            Toast.makeText(this, "You have added '$title' to the programs " , Toast.LENGTH_LONG).show()
+            val id = myData.addWorkout(title, subTitle, rest, rounds, ex1, rep1, ex2, rep2, ex3, rep3)
+            Toast.makeText(this, "You have added '$title' to the programs with id= " +id , Toast.LENGTH_LONG).show()
         }
     }
 }

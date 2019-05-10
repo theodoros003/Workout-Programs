@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+var listWorkouts = ArrayList<WorkoutInfo>()
 data class Program(val id: Long, val title: String, val subTitle: String, val rest: Long, val rounds: Long, val ex1: String, val rep1: Long, val ex2: String, val rep2: Long, val ex3: String, val rep3: Long)
 
 class MyDatabase(ctx: Context) : SQLiteOpenHelper(ctx,"Workouts", null, 1) {
@@ -43,7 +44,25 @@ class MyDatabase(ctx: Context) : SQLiteOpenHelper(ctx,"Workouts", null, 1) {
         return null
     }
 
+
     fun findWorkouts () {
-        
+        val db = readableDatabase
+        val projections = arrayOf("Id", "Title", "SubTitle")
+        var loopid = 0
+        val cursor = db.rawQuery("SELECT * FROM Workouts ", null)
+        listWorkouts.clear()
+        if (cursor.moveToFirst()){
+
+            do{
+                val id=cursor.getLong(cursor.getColumnIndex("Id"))
+                val title=cursor.getString(cursor.getColumnIndex("Title"))
+                val sub=cursor.getString(cursor.getColumnIndex("SubTitle"))
+
+                listWorkouts.add(WorkoutInfo(id,title,sub))
+
+            }while (cursor.moveToNext())
+
+        }
+        cursor.close()
     }
 }

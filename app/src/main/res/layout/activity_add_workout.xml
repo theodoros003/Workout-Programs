@@ -82,7 +82,7 @@
                 app:layout_constraintRight_toLeftOf="@id/etRest"
                 app:layout_constraintTop_toBottomOf="@id/etSubTitle"
                 android:padding="5dp"
-                android:text="Rest Between Exercises" />
+                android:text="Rest Between Exercises in Sec" />
         <EditText
                 android:id="@+id/etRest"
                 android:layout_width="0dp"
